@@ -1,3 +1,27 @@
+[Demo](https://cors-anywhere-prod.vercel.app/)
+
+### Commands
+
+```bash
+# Local development
+npm start
+
+# Deploy to Preview environment.
+npm run deploy
+
+# Deploy to Production environment.
+npm run deploy -- --prod
+```
+
+### Potential Issues
+
+If Vercel is hosted on AWS it will inherit some limitations.
+
+[API Gateway limitations](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-known-issues.html#api-gateway-known-issues-rest-apis):
+
+- disallowing `|` and `;` characters in query strings; these characters must be url encoded.
+- not supporting the `transfer-encoding` header; this header must be removed from the request if the value is `chunked`.
+
 [![Build Status](https://travis-ci.com/Rob--W/cors-anywhere.svg?branch=master)](https://travis-ci.com/Rob--W/cors-anywhere)
 [![Coverage Status](https://coveralls.io/repos/github/Rob--W/cors-anywhere/badge.svg?branch=master)](https://coveralls.io/github/Rob--W/cors-anywhere?branch=master)
 

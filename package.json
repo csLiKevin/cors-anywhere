@@ -38,10 +38,13 @@
     "lolex": "^1.5.0",
     "mocha": "^3.4.2",
     "nock": "^8.2.1",
-    "supertest": "^2.0.1"
+    "supertest": "^2.0.1",
+    "vercel": "^28.2.5"
   },
   "scripts": {
+    "deploy": "vercel",
     "lint": "eslint .",
+    "start": "vercel dev",
     "test": "mocha ./test/test*.js --reporter spec",
     "test-coverage": "istanbul cover ./node_modules/.bin/_mocha -- test/test.js test/test-ratelimit.js --reporter spec"
   },
